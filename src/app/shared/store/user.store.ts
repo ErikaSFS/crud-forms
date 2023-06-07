@@ -1,9 +1,8 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+
 export class UserStore {
   private user: BehaviorSubject<string> = new BehaviorSubject<string>('');
   public users: Observable<string> = this.user.asObservable();

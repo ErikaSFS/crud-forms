@@ -1,0 +1,17 @@
+.sidebar_component {
+    .sandwich-menu {
+      font-size: 32px;
+      color: #6d0303;
+      cursor: pointer;
+    }
+  
+    .offcanvas {
+      background-color: #aaa;
+      margin-top: 80px;
+      max-width: 200px;
+      a{
+        color: #555;
+        text-decoration: none;
+      }
+    }
+  }

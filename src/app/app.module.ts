@@ -7,11 +7,13 @@ import { SharedModule } from '../app/shared/shared.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AuthService } from '../app/shared/services/auth/auth.service';
 import { RouterModule, Routes } from '@angular/router';
-
+import { UserStore } from './shared/store/user.store';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AppRoutingModule
    
                                                                                                                                       
   ],
@@ -21,12 +23,14 @@ import { RouterModule, Routes } from '@angular/router';
     SharedModule,
     NgModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    NgbModule
     
   ],
   providers: [
     AuthService,
-    HttpClient
+    HttpClient,
+    UserStore
   ],
   bootstrap: [AppComponent]
 })
