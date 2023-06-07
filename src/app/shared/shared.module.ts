@@ -4,12 +4,16 @@ import {  HttpClientModule } from '@angular/common/http';
 import { AuthService} from './services/auth/auth.service';
 import { HttpService } from './services/http/http.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserStore } from './store/user.store';
 
 const SERVICES = [ AuthService, HttpService];
-
+const COMPONENTS = [NavbarComponent];
 @NgModule({
-  declarations: [],
+  declarations: [
+    ...COMPONENTS
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -17,7 +21,9 @@ const SERVICES = [ AuthService, HttpService];
     ReactiveFormsModule
   ],
   
-  exports: [FormsModule,
+  exports: [
+    ...COMPONENTS,
+    FormsModule,
   ReactiveFormsModule
 ],
 

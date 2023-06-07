@@ -1,0 +1,16 @@
+<section class="navbar_component p-3 d-flex justify-content-start align-items-center">
+
+    <i class="sandwich-menu me-3 bi bi-list"></i>
+  
+    <div class="avatar p-2 d-flex align-items-center">
+      <img
+        src="https://avatars.dicebear.com/api/adventurer-neutral/mail%40ashallendesign.co.uk.svg"
+      />
+      <h3 class="mx-2 mb-0">{{ (username | async) || "asdasd" }}</h3>
+    </div>
+  
+    <button type="button" class="btn btn-danger d-flex align-items-center ms-auto">
+      <i class="logout bi bi-box-arrow-right me-2"></i>
+      Logout
+    </button>
+  </section>

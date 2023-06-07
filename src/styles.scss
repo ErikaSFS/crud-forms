@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+h3,
+h1,
+p,
+button {
+  font-family: monospace !important;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 500;
+}

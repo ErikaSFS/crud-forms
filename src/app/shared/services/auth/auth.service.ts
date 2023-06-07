@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '../http/http.service';
 import { BehaviorSubject, Observable } from 'rxjs';
-
+import { UserStore } from '../../store/user.store';
+import { Router } from '@angular/router';
 @Injectable()
 export class AuthService {
   private auth: BehaviorSubject<string> = new BehaviorSubject<string>('');
@@ -9,7 +10,9 @@ export class AuthService {
 
 
 
-  constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService, 
+    private $user: UserStore,
+    private router: Router) { }
 
   public setAuth(value: string): void {
     this.auth.next(value);
@@ -33,9 +36,11 @@ export class AuthService {
   public login(username: string, password: string): void {
     this.httpService.getAuth(username, password).subscribe({
       next: (response) => {
+        this.$user.setUser(username);
         this.setAuth(response.access_token);
         sessionStorage.setItem('access_token', response.access_token);
         sessionStorage.setItem('refresh_token', response.refresh_token);
+        this.router.navigate(['/internal']);
       },
     });
   }

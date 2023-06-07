@@ -1,0 +1,32 @@
+.navbar_component {
+    background-color: #fffbfb;
+  
+    .avatar {
+      background-color: #AAA;
+      border-radius: 50vh;
+      img {
+        width: 30px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+  
+      h3 {
+        color: #352b2b;
+        line-height: 30px;
+      }
+    }
+  
+    .sandwich-menu {
+      font-size: 32px;
+      color: #EEE;
+      cursor: pointer;
+    }
+  
+    .logout {
+      font-size: 15px;
+    }
+  
+    button {
+      height: 50px;
+    }
+  }
