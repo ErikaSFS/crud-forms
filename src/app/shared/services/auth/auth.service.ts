@@ -19,14 +19,14 @@ export class AuthService {
   public renewToken(): void {
     const refreshToken = sessionStorage.getItem('refresh_token');
 
-    if(refreshToken) {
+    if (refreshToken) {
       this.httpService.refreshToken(refreshToken).subscribe({
         next: (response) => {
-          this.setAuth(response.acess_token);
+          this.setAuth(response.access_token);
           sessionStorage.setItem('access_token', response.access_token);
           sessionStorage.setItem('refresh_token', response.refresh_token);
         },
-      }),
+      });
     }
   }
 
