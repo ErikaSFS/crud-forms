@@ -8,6 +8,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserStore } from './store/user.store';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { ToasterComponent } from './components/toaster/toaster.component';
 
 
 const SERVICES = [ AuthService, HttpService];
@@ -16,7 +19,10 @@ SidebarComponent];
 @NgModule({
   declarations: [
     ...COMPONENTS,
-    SidebarComponent
+    SidebarComponent,
+    ConfirmationModalComponent,
+    LoadingComponent,
+    ToasterComponent
   ],
   imports: [
     CommonModule,

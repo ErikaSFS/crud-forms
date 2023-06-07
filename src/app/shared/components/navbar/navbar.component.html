@@ -5,10 +5,14 @@
       <img
         src="https://avatars.dicebear.com/api/adventurer-neutral/mail%40ashallendesign.co.uk.svg"
       />
-      <h3 class="mx-2 mb-0">{{ (username | async) || "asdasd" }}</h3>
+      <h3 class="mx-2 mb-0">{{ username | async }}</h3>
     </div>
   
-    <button type="button" class="btn btn-danger d-flex align-items-center ms-auto">
+    <button
+    type="button"
+    class="btn btn-danger d-flex align-items-center ms-auto"
+    (click)="auth.logOut()"
+  >
       <i class="logout bi bi-box-arrow-right me-2"></i>
       Sair
     </button>

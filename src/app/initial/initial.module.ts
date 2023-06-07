@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { InitialComponent } from './initial.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { InitialRoutingModule } from './initial-routing.module';
-import { LoginComponent } from '../login/login.component';
+import { LoginComponent } from '../external/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { BanksComponent } from './banks/banks.component';
 
 @NgModule({
   
@@ -13,6 +14,6 @@ import { HomeComponent } from './home/home.component';
     SharedModule,
     InitialRoutingModule
   ],
-  declarations: [InitialComponent, LoginComponent, HomeComponent]
+  declarations: [InitialComponent, LoginComponent, HomeComponent, BanksComponent]
 })
 export class InitialModule { }

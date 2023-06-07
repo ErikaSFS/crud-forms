@@ -11,13 +11,14 @@ import { AuthService } from '../../services/auth/auth.service';
 export class NavbarComponent implements OnInit {
   public username!: Observable<string>;
 
-  constructor(private $user: UserStore) {}
+  constructor(private $user: UserStore, public auth: AuthService) {}
 
   public ngOnInit(): void {
     this.getUser();
   }
 
   private getUser(): void {
+    this.auth.setUserName();
     this.username = this.$user.users;
   }
 }
